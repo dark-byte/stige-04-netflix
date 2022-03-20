@@ -1,0 +1,139 @@
+:root{
+    --primary-color: #e50914;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #999;
+}
+
+ul{ list-style: none;}
+img{ width: 100%;}
+a:hover{ text-decoration: underline;}
+h1,h2,h3,h4{ color: #fff;}
+a{ 
+    color: #fff;
+    text-decoration: none;
+}
+
+.showcase{
+    display: flex;
+    width: 100%;
+    height: 93vh;
+    background: url('./img/bg') no-repeat center center/cover;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showcase::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.45);
+}
+
+.showcase-top{
+    position: relative;
+    height: 120px;
+    width: 100%;
+    padding: 2em 3em;
+    z-index: 2;
+}
+
+.showcase-top img{
+    width: 220px;
+}
+
+.showcase-top a{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+
+.showcase-content{
+    margin-top: 10em;
+    z-index: 2;
+    text-align: center;
+    max-width: 50%;
+}
+
+.showcase-content h1{
+    font-size: 5em;
+}
+
+.showcase-content h3{
+    font-size: 2.1em;
+    font-weight: 400;
+    margin-top: 0.8em;
+    margin-bottom: 1.5em;
+}
+
+.showcase-content p{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.opt-form{
+    height: 70px;
+    margin-top: 1em;
+}
+
+.jumbotron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px solid rgb(65, 65, 65);
+}
+
+.jumbotron h1{
+    font-size: 3.8em;
+}
+
+.jumbotron h2{
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 1em;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    padding: 2em 5em;
+}
+
+
+input{
+    padding: 1em 1.6em;
+    height: 100%;
+}
+
+.btn{
+    border: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 1em 1.6em;
+    border-radius: 2px;
+}
+
+.btn-rounded{
+    border-radius: 5px;
+}
+
+.btn-lg{
+    font-size: 2em;
+    padding: 0.5em 1.4em;
+
+}
