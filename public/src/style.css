@@ -40,6 +40,8 @@ a{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.45);
+    box-shadow: inset 0px 80px 200px #000, inset 0px -80px 200px #000;
+
 }
 
 .showcase-top{
@@ -86,15 +88,41 @@ a{
 }
 
 .opt-form{
-    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    min-width: 100%;
     margin-top: 1em;
+}
+
+.opt-form input{
+    min-width: 300px;
+    min-height: 50px;
+    outline: none;
+}
+
+.opt-form a{
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    font-size: 1.2em;
+    min-height: 50px;
+}
+
+.opt-form i{
+    margin-left: 5px;
 }
 
 .jumbotron{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 10px solid rgb(65, 65, 65);
+    border-top: 10px solid rgb(37, 37, 37);
+}
+
+.jumbotron-end{
+    border-bottom: 10px solid rgb(37, 37, 37);
 }
 
 .jumbotron h1{
@@ -114,6 +142,118 @@ a{
     padding: 2em 5em;
 }
 
+.section-faq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.faq{
+    width: 75%;
+    min-width: 700px;
+    margin-bottom: 10px;
+}
+
+.section-faq h2{
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.faq h3{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.question{
+    background-color: rgb(56, 56, 56);
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.faq.active .answer{
+    padding: 25px 20px;
+    max-height: 400px;
+    margin-top: 2px;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform:  translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+
+.answer{
+    background-color: rgb(56, 56, 56);
+    padding: 0px 20px;
+
+    margin-top: 2px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height, padding 0.5s ease;
+}
+
+.pre-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.pre-footer p{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: -10px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer{
+    max-width: 1200px;
+    flex: 1;
+    padding: 2rem 10rem;
+}
+
+.footer p{
+    color:#999;
+    font-size: 1rem;
+}
+
+.footer-cols{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-cols li{
+    padding: 10px 0px;
+}
+
+.footer a{
+    color: #999;
+}
+
+.netflix-india-p{
+    margin-top: 30px;
+}
 
 input{
     padding: 1em 1.6em;
@@ -136,4 +276,159 @@ input{
     font-size: 2em;
     padding: 0.5em 1.4em;
 
+}
+
+@media (max-width: 1200px) {
+
+    .showcase-content{
+        max-width: 80%;
+    }
+
+    .showcase-content h1{
+        font-size: 3.5em;
+    }
+    
+    .showcase-content h3{
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-top: 1.8em;
+        margin-bottom: 1.5em;
+    }
+    
+    .showcase-content p{
+        color: #fff;
+        font-size: 1em;
+    }
+
+    .jumbotron h1{
+        font-size: 2.5em;
+    }
+
+    .jumbotron h2{
+        font-size: 1em;
+        font-weight: 400;
+        margin-top: 1em;
+    }
+
+    .jumbotron img{
+        min-width: 300px;
+    }
+
+
+   
+}
+
+@media (max-width: 800px){
+
+    .showcase-top img{
+        width: 150px;
+
+    }
+
+    .jumbotron{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .jumbotron h1{
+        font-size: 2.5em;
+    }
+
+    .jumbotron h2{
+        font-size: 1em;
+        font-weight: 400;
+        margin-top: 1em;
+    }
+
+    .row{
+        display: flex;
+        min-width: 100%;
+        padding: 2em 5em;
+    }
+
+    .jumbo-inverse{
+        flex-direction: column-reverse;
+    }
+
+    .opt-form{
+        flex-direction: column;
+    }    
+
+    .opt-form input{
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    .pre-footer form{
+        padding: 0 30px;
+        margin-bottom: 50px;
+    }
+
+    .footer{
+        padding: 2rem 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-cols{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .footer ul {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 500px){
+    .showcase-top img{
+        width: 100px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .showcase-content{
+        margin-top: 2rem;
+    }
+
+    .showcase-content h1{
+        font-size: 2em;
+    }
+    
+    .showcase-content h3{
+        font-size: 1.2em;
+        margin-top: 1rem;
+    }
+
+    .section-faq h2{
+        font-size: 2rem;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .faq{
+        width: 100%;
+        min-width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .pre-footer form{
+        padding: 0 30px;
+        margin-bottom: 50px;
+    }
+
+    .footer-cols{
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .footer ul {
+        padding: 20px;
+        font-size: 1rem;
+    }
 }
