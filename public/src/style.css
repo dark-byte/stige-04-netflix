@@ -32,6 +32,27 @@ a{
     align-items: center;
 }
 
+.showcase-sign-in{
+    height: 140vh;
+    display: flex;
+    position: relative;
+    width: 100%;
+    background: url('./img/bg') no-repeat center center/cover;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showcase-sign-in::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140vh;
+    background-color: rgba(0,0,0,0.45);
+
+}
+
 .showcase::after{
     content: '';
     position: absolute;
@@ -278,6 +299,134 @@ input{
 
 }
 
+
+.sign-in-container{
+    z-index: 2;
+    flex-direction: column;
+    padding: 5rem;
+    padding-bottom: 10rem;
+    max-width: 60%;
+    background: rgba(0,0,0,0.75);
+}
+
+.sign-in-container h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.sign-in-container input{
+    display: flex;
+    flex-direction: column;
+    max-height: 60px;
+    background-color: rgb(37, 37, 37);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(235, 162, 27);
+    border-radius: 5px;
+    color: #fff;
+    min-width: 400px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.sign-in-container label{
+    color: rgb(235, 162, 27);
+}
+
+.sign-in-wide{
+    margin-top: 2.5rem;
+    display: block;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.remember-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 20px 0;
+}
+
+.remember-me a{
+    color: #999;
+}
+
+.remember-me label{
+    color: rgb(212, 212, 212);
+    min-width: max-content;
+}
+
+.remember-me-left {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input{
+    height: 15px;
+    min-width: 20px;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+.fb-login{
+    display: flex;
+    align-items: center;
+}
+
+.fb-login a{
+    color: #999;
+}
+
+.fb-login svg{
+    margin-right: 5px;
+    max-width: 20px;
+    filter: invert(1);
+}
+
+.sign-up{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sign-up a{
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.learn-more{
+    color: rgb(0, 90, 192);
+}
+
+.sign-in-foot-cont{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    min-height: 300px;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.sign-in-footer{
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    padding: 2.5rem;
+    color: #999;
+}
+
+.sign-in-footer a{
+    color: #999;
+}
+
 @media (max-width: 1200px) {
 
     .showcase-content{
@@ -314,7 +463,13 @@ input{
         min-width: 300px;
     }
 
+    .sign-in-container input{
+        min-width: 250px;
+    }
 
+    .remember-me input{
+        min-width: 20px;
+    }
    
 }
 
@@ -379,6 +534,33 @@ input{
     .footer ul {
         padding: 20px;
         font-size: 1rem;
+    }
+
+    .showcase-sign-in{
+        background: #000;
+    }
+
+    .sign-in-container{
+        min-width: 100%;
+        padding: 2rem;
+        padding-top: 0;
+    }
+
+    .sign-in-foot-cont{
+        position: relative;
+        border-top: 2px solid rgb(92, 92, 92);
+    }
+
+    .sign-in-foot-cont ul{
+        margin: 0 auto;
+        flex-wrap: wrap;
+        min-width: 150px;
+        margin-bottom: 1em;
+        font-size: 0.8em;
+    }
+
+    .footer-cols{
+        align-items: flex-start;
     }
 }
 
